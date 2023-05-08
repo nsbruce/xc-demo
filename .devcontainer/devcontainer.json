@@ -1,0 +1,40 @@
+{
+	"name": "xc demo zone",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	"postCreateCommand": "git config --system --add safe.directory .",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"aaron-bond.better-comments",
+				"njpwerner.autodocstring",
+				"bungcip.better-toml",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.isort",
+				"yzhang.markdown-all-in-one",
+				"joffreykern.markdown-toc",
+				"DavidAnson.vscode-markdownlint",
+				"mohsen1.prettify-json",
+				"albert.TabOut",
+				"redhat.vscode-yaml",
+				"xc-vscode.xc-vscode"
+			]
+		}
+	},
+
+	"overrideCommand": true, // runs /bin/sh -c "while sleep 1000; do :; done" instead of the service command
+	"features": {
+		"common": {
+			"username": "automatic",
+			"uid": "automatic",
+			"gid": "automatic",
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true
+		}
+	}
+}
